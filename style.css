@@ -7,7 +7,8 @@ body {
 }
 
 header {
-    background-color: rgb(242, 242, 242);
+    background-color: rgba(255, 255, 255, 0.361);
+    backdrop-filter: blur(10px);
     padding: 20px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
     position: fixed;
@@ -458,7 +459,9 @@ footer p {
     transform: scale(1.05) translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
-
+.menu-toggle{
+    display: none;
+}
 @media (min-width: 768px) {
     .pricing h2 {
         font-size: 3.6em;
@@ -547,3 +550,61 @@ footer p {
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        margin: 8px; /* Centrar horizontalmente */
+        border-radius: 8px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.164);
+        backdrop-filter: blur(10px);   
+        font-weight: 900;                                 
+    }
+
+    .menu.active {
+        display: flex;
+        margin-top: 8px;
+        border-radius: 12px;
+        border: #5656563b 1px solid;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .menu-toggle i{
+        font-size: 24px;
+        color: #2e2e2e;
+    }
+    ul{
+        padding: 1rem;
+        list-style: none;
+        margin: 0;
+    }
+    .menu li{
+        margin: 0;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    li{
+        margin: 0;
+        list-style: none;
+        border-radius: 8px;
+    }
+    .cta{
+        display: none;
+    }
+    }
