@@ -462,6 +462,9 @@ footer p {
 .menu-toggle{
     display: none;
 }
+#cta-list{
+    display: none;
+}
 @media (min-width: 768px) {
     .pricing h2 {
         font-size: 3.6em;
@@ -564,6 +567,7 @@ footer p {
         top: 100%;
         left: 0;
         width: 100%;
+        height: min-content;
         background-color: rgba(255, 255, 255, 0.164);
         backdrop-filter: blur(10px);   
         font-weight: 900;                                 
@@ -607,4 +611,19 @@ footer p {
     .cta{
         display: none;
     }
+    #cta-list{
+        display: block;
     }
+    #cta-list > .cta{
+        display: block;
+    }
+    #cta-list > .cta > a{
+        display: block;
+        text-align: center;
+        padding: 12px 22px;
+        border-radius: 8px;
+        font-weight: 900;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    }
+}
